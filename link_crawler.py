@@ -47,8 +47,6 @@ class Crawler:
                     print(link)
                     self.crawl(link)
 
-    def result_count(self):
-        print(colored(str(len(self.target_links))));
 
     def script_desc(self):
         self.program="spider"
@@ -64,10 +62,9 @@ class Crawler:
 try:
     crawl=Crawler()
     options=crawl.arguman_al()
-    #print(colored(options.url+"\n"))
     crawl.crawl(options.url)
-    #crawl.result_count()
 except KeyboardInterrupt:
     crawl.keyboardinterrupt_message()
+
 
 
